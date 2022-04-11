@@ -6,17 +6,19 @@ import Mocvd from './screens/Mocvd';
 import Measurement from './screens/Measurement';
 import Test from './screens/Test';
 import NavBarElements from './components/NavBar/NavBarElements';
+import Data from './data/myData'; 
 
 
 function App() {
+  const data=Data;
   return (
     <Router>
       <NavBarElements/>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route index element={<Home/>}/>
         <Route path="/Cost" element={<Cost/>}/>
         <Route path="/Mocvd" element={<Mocvd/>}/>
-        <Route path="/Test" element={<Test/>}/>
+        <Route path="/Test" element={<Test data={data}/>}/>
         <Route path="/Measurement" element={<Measurement/>}/>
       </Routes>
     </Router>

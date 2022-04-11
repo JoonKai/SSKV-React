@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import {ResponsiveBar} from '@nivo/bar';
+import BarChart from '../components/Charts/BarChart';
 
-const Test = () => {
+const Test = (props) => {
   return (
-    <div><h1>Test</h1></div>
+    <div style={{ display:'inline-block', width:600, height: 300}}>
+        <BarChart data={props.data}></BarChart>
+    </div>
   )
 }
 
